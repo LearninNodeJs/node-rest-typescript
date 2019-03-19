@@ -1,0 +1,27 @@
+{
+  "name": "rest-typescript-api",
+  "version": "1.0.0",
+  "description": "This is a simple crud rest api using typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/LearninNodeJs/node-rest-typescript.git"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "rest"
+  ],
+  "author": "Kamau Brian",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
+    "nodemon": "^1.18.10"
+  }
+}
