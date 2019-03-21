@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose"
 
-export const ContactSchema = mongoose.Schema({
+const ContactSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
@@ -8,4 +8,6 @@ export const ContactSchema = mongoose.Schema({
     company: {type: String, required: true},
     phone: {type: Number, required: true},
     created_date: {type: Date, default: Date.now()}
-})
+});
+
+export default mongoose.model('ContactSchema',ContactSchema)
