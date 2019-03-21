@@ -4,7 +4,7 @@
   "description": "This is a simple crud rest api using typescript",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
+    "test": "jest /lib/**/tests/*.ts",
     "build": "tsc",
     "dev": "ts-node ./lib/server.ts",
     "start": "nodemon ./dist/server.js",
