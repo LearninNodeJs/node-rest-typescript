@@ -4,7 +4,7 @@
   "description": "This is a simple crud rest api using typescript",
   "main": "index.js",
   "scripts": {
-    "test": "jest /lib/**/tests/*.ts",
+    "test": "mocha   lib/**/tests/*.ts",
     "build": "tsc",
     "dev": "ts-node ./lib/server.ts",
     "start": "nodemon ./dist/server.js",
@@ -32,9 +32,13 @@
     "nodemon": "^1.18.10"
   },
   "devDependencies": {
+    "@babel/register": "^7.4.0",
+    "@types/chai-http": "^4.2.0",
     "@types/jest": "^24.0.11",
     "@types/mocha": "^5.2.6",
+    "babel": "^6.23.0",
     "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "chai-like": "^1.1.1",
     "chai-things": "^0.2.0",
     "expect": "^24.5.0",

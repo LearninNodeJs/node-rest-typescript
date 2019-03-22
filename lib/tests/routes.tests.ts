@@ -1,14 +1,16 @@
-import * as request from "supertest"
-import * as  expect from "expect"
-import server from "../server"
+import server from '../server'
+import * as chai from 'chai'
+import chaiHttp = require("chai-http")
+import "mocha"
 
-afterEach(()=>{
-    server.close();
-})
+chai.use(chaiHttp);
+const expect = chai.expect;
 
-describe('GET / - a simple api endpoint', () => {
-    it('it should return (200) on simple get request',async ()=>{
-        const result = await request(server).get('/');
-        expect(result.statusCode).toEqual(200);
+describe('Testing API Calls',()=>{
+    it('it should return  a response from the api',()=>{
+        return chai.request(server).get('/')
+            .then(res=>{
+                chai.expect(res.text).to.eql("Get Working Successfully")
+            })
     })
-});
+})
