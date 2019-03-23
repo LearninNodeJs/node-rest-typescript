@@ -16,33 +16,11 @@ export class Routes {
 
         app.route('/contact').post(this.contactController.addNewContact)
 
-        app.route('/add')
-            .post((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'Post Request Successful'
-                })
-            })
 
         app.route('/contact/:contactId')
-            .get((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'Get using Parameters successful'
-                })
-            })
-
-        app.route('/update')
-            .put((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'Put Request Successful'
-                })
-            })
-
-        app.route('/contact/:id')
-            .delete((req: Request, res: Response) => {
-                res.status(200).send({
-                    message: 'Delete request successful'
-                })
-            })
+            .get(this.contactController.getContactWithId)
+            .put(this.contactController.updateContact)
+            .delete(this.contactController.deleteContact)
 
     }
 }
