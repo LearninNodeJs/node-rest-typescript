@@ -27,7 +27,7 @@ class App {
         this.app.use(cors())
     }
 
-    private async connectMongo(): mongoose.connect {
+    private async connectMongo():mongoose.connect {
         let connection;
         try {
             connection = await mongoose.connect(this.mongoDatabaseURL,{useNewUrlParser:true})
