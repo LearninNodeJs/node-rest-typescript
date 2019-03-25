@@ -4,6 +4,7 @@ import {Routes} from "./routes/routes"
 import * as morgan from "morgan"
 import * as cors from "cors"
 import *  as mongoose from "mongoose"
+import errorMiddleware from "./middleware/error.middleware"
 
 require('dotenv').config()
 
@@ -25,6 +26,7 @@ class App {
         this.app.use(bodyParser.urlencoded({extended: false}))
         this.app.use(morgan('dev'))
         this.app.use(cors())
+        this.app.use(errorMiddleware)
     }
 
     private async connectMongo():mongoose.connect {

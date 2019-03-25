@@ -15,7 +15,7 @@ export class Routes {
             })
 
         app.route('/contact').post(this.contactController.addNewContact)
-        app.route('/contact').post(this.contactController.getAllContacts)
+        app.route('/contact-get').get(this.contactController.getAllContacts)
 
         app.route('/contact/:contactId')
             .get(this.contactController.getContactWithId)
